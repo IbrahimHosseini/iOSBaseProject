@@ -12,8 +12,9 @@ struct CustomButton: View {
     @Environment(\.colorScheme) var colorScheme
     
     @State var action: () -> Void
-    @State var icon: ImageResource?
+    @State var imageIcon: Image?
     @State var title: String?
+    @State var size: CGFloat = 18
     @State var height: CGFloat = 45
     @State var backgroundColor: Color = .accentColor
     @State var isCapsule: Bool = false
@@ -22,28 +23,29 @@ struct CustomButton: View {
         HStack {
             Button(action: action, label: {
                 HStack {
+
                     if let title {
                         Text(title)
                     }
                     
-                    if let icon {
-                        Image(icon)
+                    if let imageIcon {
+                        imageIcon
                     }
                     
                 }
-                .padding()
+                .padding([.leading, .trailing], 24)
             })
             .font(
                 .system(
-                    size: 18,
+                    size: size,
                     weight: .bold,
                     design: .default
                 )
             )
-            .foregroundColor(.primary)
+            .foregroundColor(.blackWhite)
             .frame(height: height)
             .background(backgroundColor)
-            .clipShape(.capsule)
+            .clipShape(.rect(cornerRadius: isCapsule ? height/2 : height/5))
         }
     }
 }
@@ -52,18 +54,35 @@ struct CustomButton: View {
     Group {
         CustomButton(
             action: {},
-            icon: .arrow,
+            imageIcon: Image(.arrow),
             title: "Tap on me",
-            height: 50
+            height: 60,
+            isCapsule: true
         )
-        .environment(\.colorScheme, .dark)
         
         CustomButton(
             action: {},
-            icon: .arrow,
-            title: "Tap on me"
+            imageIcon: Image(systemName: "magnifyingglass"),
+            title: "Search",
+            height: 50,
+            backgroundColor: .indigo
         )
-        .environment(\.colorScheme, .light)
-        
+
+        CustomButton(
+            action: {},
+            imageIcon: Image(systemName: "checkmark.seal.fill"),
+            title: "Approved",
+            height: 70
+        )
+
+        CustomButton(
+            action: {},
+            imageIcon: Image(systemName: "plus"),
+            title: nil,
+            height: 66,
+            backgroundColor: .green,
+            isCapsule: true
+        )
+
     }
 }

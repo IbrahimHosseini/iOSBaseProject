@@ -1,5 +1,5 @@
 //
-//  APIEndpont.swift
+//  APIEndpoint.swift
 //  iOSBaseProject
 //
 //  Created by Ibrahim on 4/22/24.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol APIEndpont {
+protocol APIEndpoint {
     
     /// base of API url
     var baseURL: URL { get }
@@ -25,7 +25,7 @@ protocol APIEndpont {
     var parameters: [String: Any]? { get }
 }
 
-extension APIEndpont {
+extension APIEndpoint {
     
     /// set the base url from environment
     var baseURL: URL {
