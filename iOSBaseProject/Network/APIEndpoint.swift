@@ -18,7 +18,7 @@ protocol APIEndpoint {
     /// set the HTTP method of API
     var method: HTTPMethod { get }
     
-    /// set the heades for API
+    /// set the headers for API
     var headers: [String: String]? { get }
     
     /// set the API parameters
@@ -28,7 +28,11 @@ protocol APIEndpoint {
 extension APIEndpoint {
     
     /// set the base url from environment
-    var baseURL: URL {
-        URL(string: "http://baseurl.com/")!
-    }
+    var baseURL: URL { URL(string: "http://baseurl.com/")! }
+
+    var method: HTTPMethod { .get }
+
+    var headers: [String: String]? { nil }
+
+    var parameters: [String: Any]? { nil }
 }
