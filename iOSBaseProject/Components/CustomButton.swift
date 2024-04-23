@@ -35,13 +35,7 @@ struct CustomButton: View {
                 }
                 .padding([.leading, .trailing], 24)
             })
-            .font(
-                .system(
-                    size: size,
-                    weight: .bold,
-                    design: .default
-                )
-            )
+            .font(.system(size: size, weight: .bold, design: .default))
             .foregroundColor(.blackWhite)
             .frame(height: height)
             .background(backgroundColor)
