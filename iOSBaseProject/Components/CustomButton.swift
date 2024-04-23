@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct CustomButton: View {
-    
-    @Environment(\.colorScheme) var colorScheme
-    
+        
     @State var action: () -> Void
     @State var imageIcon: Image?
     @State var title: String?

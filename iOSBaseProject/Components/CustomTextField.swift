@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct CustomTextField: View {
-    
-    @Environment(\.colorScheme) var colorScheme
-    
+
     @State var text: String = ""
     @State var colorStyle: Color = .blue
     @State var textColor: Color = .blackWhite
@@ -23,51 +21,61 @@ struct CustomTextField: View {
     
     var body: some View {
         if isSecureField {
-            SecureField(
-                text: $text,
-                prompt: Text(placeholder)) {
-                    
-                }
-                .padding()
-                .foregroundStyle(textColor)
-                .frame(height: height)
-                .overlay {
-                    if hasBorder {
-                        RoundedRectangle(cornerRadius: cornerRadius)
-                            .stroke(colorStyle, lineWidth: 0.5)
-                    }
-                }
-                .background {
-                    if hasBackground {
-                        colorStyle.clipShape(.rect(cornerRadius: cornerRadius)).opacity(0.15)
-                    }
-                }
-                
-                .padding()
+            makeSecureTextField()
         } else {
-            TextField(
-                text: $text,
-                prompt: Text(placeholder)) {
-                    
-                }
-                .padding()
-                .foregroundStyle(textColor)
-                .frame(height: height)
-                .overlay {
-                    if hasBorder {
-                        RoundedRectangle(cornerRadius: cornerRadius)
-                            .stroke(colorStyle, lineWidth: 0.5)
-                    }
-                }
-                .background {
-                    if hasBackground {
-                        colorStyle.clipShape(.rect(cornerRadius: cornerRadius)).opacity(0.15)
-                    }
-                }
-                .frame(height: height)
-                .padding()
+            makeTextField()
         }
     }
+
+    private func makeSecureTextField() -> some View {
+        SecureField(
+            text: $text,
+            prompt: Text(placeholder)) {
+
+            }
+            .padding()
+            .foregroundStyle(textColor)
+            .frame(height: height)
+            .overlay {
+                if hasBorder {
+                    RoundedRectangle(cornerRadius: cornerRadius)
+                        .stroke(colorStyle, lineWidth: 0.5)
+                }
+            }
+            .background {
+                if hasBackground {
+                    colorStyle.clipShape(.rect(cornerRadius: cornerRadius)).opacity(0.15)
+                }
+            }
+            .frame(height: height)
+            .padding()
+    }
+
+    private func makeTextField() -> some View {
+
+        TextField(
+            text: $text,
+            prompt: Text(placeholder)) {
+
+            }
+            .padding()
+            .foregroundStyle(textColor)
+            .frame(height: height)
+            .overlay {
+                if hasBorder {
+                    RoundedRectangle(cornerRadius: cornerRadius)
+                        .stroke(colorStyle, lineWidth: 0.5)
+                }
+            }
+            .background {
+                if hasBackground {
+                    colorStyle.clipShape(.rect(cornerRadius: cornerRadius)).opacity(0.15)
+                }
+            }
+            .frame(height: height)
+            .padding()
+    }
+
 }
 
 #Preview {
