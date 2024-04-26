@@ -11,7 +11,13 @@ import SwiftUI
 struct iOSBaseProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(
+                model: PostViewModel(
+                    postService: PostServiceImp(
+                        network: URLSessionAPIClient<PostAPIs>.init()
+                    )
+                )
+            )
         }
     }
 }

@@ -8,17 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @ObservedObject var model: PostViewModel
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text(model.posts[0].title)
         }
+        .onAppear(perform: {
+            model.fetchPost()
+        })
         .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(
+        model: PostViewModel(
+            postService: PostServiceImp(network: URLSessionAPIClient<PostAPIs>.init())
+        )
+    )
 }

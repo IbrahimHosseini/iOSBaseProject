@@ -28,7 +28,7 @@ protocol APIEndpoint {
 extension APIEndpoint {
     
     /// set the base url from environment
-    var baseURL: URL { URL(string: "http://baseurl.com/")! }
+    var baseURL: URL { URL(string: "https://jsonplaceholder.typicode.com/")! }
 
     var method: HTTPMethod { .get }
 
