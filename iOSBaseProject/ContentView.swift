@@ -13,7 +13,7 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Text(model.posts[0].title)
+            Text(model.posts.first?.title ?? "No data")
         }
         .onAppear(perform: {
             model.fetchPost()
