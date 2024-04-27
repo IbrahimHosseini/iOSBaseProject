@@ -11,6 +11,7 @@
 		032E08CE2BDD948B006A5222 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032E08CD2BDD948B006A5222 /* Post.swift */; };
 		032E08D02BDD94A7006A5222 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032E08CF2BDD94A7006A5222 /* PostService.swift */; };
 		034524D92BDBB2E200063514 /* PostAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034524D82BDBB2E200063514 /* PostAPIs.swift */; };
+		03670D632BDD9DC700CA7C08 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03670D622BDD9DC700CA7C08 /* PostCell.swift */; };
 		A51B2AB02BD68F0B0036A3E1 /* iOSBaseProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51B2AAF2BD68F0B0036A3E1 /* iOSBaseProjectApp.swift */; };
 		A51B2AB22BD68F0B0036A3E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51B2AB12BD68F0B0036A3E1 /* ContentView.swift */; };
 		A51B2AB42BD68F0C0036A3E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51B2AB32BD68F0C0036A3E1 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		032E08CD2BDD948B006A5222 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		032E08CF2BDD94A7006A5222 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		034524D82BDBB2E200063514 /* PostAPIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPIs.swift; sourceTree = "<group>"; };
+		03670D622BDD9DC700CA7C08 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		A51B2AAC2BD68F0B0036A3E1 /* iOSBaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSBaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51B2AAF2BD68F0B0036A3E1 /* iOSBaseProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSBaseProjectApp.swift; sourceTree = "<group>"; };
 		A51B2AB12BD68F0B0036A3E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				032E08CF2BDD94A7006A5222 /* PostService.swift */,
 				032E08CD2BDD948B006A5222 /* Post.swift */,
 				032E08CB2BDD9428006A5222 /* PostViewModel.swift */,
+				03670D622BDD9DC700CA7C08 /* PostCell.swift */,
 			);
 			path = iOSBaseProject;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				A51B2AB22BD68F0B0036A3E1 /* ContentView.swift in Sources */,
 				A53E307A2BD7ECB20069E106 /* CustomTextField.swift in Sources */,
 				034524D92BDBB2E200063514 /* PostAPIs.swift in Sources */,
+				03670D632BDD9DC700CA7C08 /* PostCell.swift in Sources */,
 				A51B2AB02BD68F0B0036A3E1 /* iOSBaseProjectApp.swift in Sources */,
 				032E08D02BDD94A7006A5222 /* PostService.swift in Sources */,
 				A51B2AE62BD6A5160036A3E1 /* CustomButton.swift in Sources */,

@@ -14,10 +14,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List(model.posts, id: \.id) { post in
-                HStack {
-                    Text("\(post.userId)")
-                    Text(post.title)
-                }
+                PostCell(id: "\(post.id)", title: post.title)
             }
             .navigationTitle("Posts")
             .listStyle(.grouped)
@@ -25,7 +22,7 @@ struct ContentView: View {
             Button {
                 model.fetchPost()
             } label: {
-                Text("Fetch Data")
+                Text("Get Posts")
             }
         }
 
@@ -39,3 +36,4 @@ struct ContentView: View {
         )
     )
 }
+
