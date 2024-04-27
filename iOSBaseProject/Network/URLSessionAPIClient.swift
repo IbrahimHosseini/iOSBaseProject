@@ -25,6 +25,7 @@ class URLSessionAPIClient<EndpointType: APIEndpoint>: APIClient {
         return URLSession.shared.dataTaskPublisher(for: request)
             .subscribe(on: DispatchQueue.global(qos: .background))
             .map(\.data)
+            .print("data")
             .decode(type: T.self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
     }
