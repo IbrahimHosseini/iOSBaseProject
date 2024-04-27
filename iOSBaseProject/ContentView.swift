@@ -9,16 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @ObservedObject var model: PostViewModel
+    @StateObject var model: PostViewModel
 
     var body: some View {
-        VStack {
-            Text(model.posts.first?.title ?? "No data")
+        NavigationStack {
+            List(model.posts, id: \.id) { post in
+                HStack {
+                    Text("\(post.userId)")
+                    Text(post.title)
+                }
+            }
+            .navigationTitle("Posts")
+            .listStyle(.grouped)
+
+            Button {
+                model.fetchPost()
+            } label: {
+                Text("Fetch Data")
+            }
         }
-        .onAppear(perform: {
-            model.fetchPost()
-        })
-        .padding()
+
     }
 }
 

@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		033CBC8D2BD6EE0B00037B3E /* SampleAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033CBC8C2BD6EE0B00037B3E /* SampleAPICall.swift */; };
+		032E08CC2BDD9428006A5222 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032E08CB2BDD9428006A5222 /* PostViewModel.swift */; };
+		032E08CE2BDD948B006A5222 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032E08CD2BDD948B006A5222 /* Post.swift */; };
+		032E08D02BDD94A7006A5222 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032E08CF2BDD94A7006A5222 /* PostService.swift */; };
 		034524D92BDBB2E200063514 /* PostAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034524D82BDBB2E200063514 /* PostAPIs.swift */; };
 		A51B2AB02BD68F0B0036A3E1 /* iOSBaseProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51B2AAF2BD68F0B0036A3E1 /* iOSBaseProjectApp.swift */; };
 		A51B2AB22BD68F0B0036A3E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51B2AB12BD68F0B0036A3E1 /* ContentView.swift */; };
@@ -44,7 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		033CBC8C2BD6EE0B00037B3E /* SampleAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAPICall.swift; sourceTree = "<group>"; };
+		032E08CB2BDD9428006A5222 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		032E08CD2BDD948B006A5222 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		032E08CF2BDD94A7006A5222 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		034524D82BDBB2E200063514 /* PostAPIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPIs.swift; sourceTree = "<group>"; };
 		A51B2AAC2BD68F0B0036A3E1 /* iOSBaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSBaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51B2AAF2BD68F0B0036A3E1 /* iOSBaseProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSBaseProjectApp.swift; sourceTree = "<group>"; };
@@ -121,8 +125,10 @@
 				A51B2AB32BD68F0C0036A3E1 /* Assets.xcassets */,
 				A51B2AB52BD68F0C0036A3E1 /* Preview Content */,
 				A51B2AE72BD6ACD60036A3E1 /* Colors.xcassets */,
-				033CBC8C2BD6EE0B00037B3E /* SampleAPICall.swift */,
 				034524D82BDBB2E200063514 /* PostAPIs.swift */,
+				032E08CF2BDD94A7006A5222 /* PostService.swift */,
+				032E08CD2BDD948B006A5222 /* Post.swift */,
+				032E08CB2BDD9428006A5222 /* PostViewModel.swift */,
 			);
 			path = iOSBaseProject;
 			sourceTree = "<group>";
@@ -304,13 +310,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				032E08CC2BDD9428006A5222 /* PostViewModel.swift in Sources */,
 				A51B2ADF2BD6999F0036A3E1 /* APIEndpoint.swift in Sources */,
-				033CBC8D2BD6EE0B00037B3E /* SampleAPICall.swift in Sources */,
 				A51B2ADD2BD6998F0036A3E1 /* HTTPMethod.swift in Sources */,
+				032E08CE2BDD948B006A5222 /* Post.swift in Sources */,
 				A51B2AB22BD68F0B0036A3E1 /* ContentView.swift in Sources */,
 				A53E307A2BD7ECB20069E106 /* CustomTextField.swift in Sources */,
 				034524D92BDBB2E200063514 /* PostAPIs.swift in Sources */,
 				A51B2AB02BD68F0B0036A3E1 /* iOSBaseProjectApp.swift in Sources */,
+				032E08D02BDD94A7006A5222 /* PostService.swift in Sources */,
 				A51B2AE62BD6A5160036A3E1 /* CustomButton.swift in Sources */,
 				A51B2AE12BD69AAD0036A3E1 /* URLSessionAPIClient.swift in Sources */,
 				A51B2ADB2BD692000036A3E1 /* APIClient.swift in Sources */,
