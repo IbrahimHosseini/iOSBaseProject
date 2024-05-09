@@ -19,23 +19,15 @@ import Foundation
  *  - body: The content of the post.
  */
 struct Post: Codable, Identifiable {
-    /**
-     *  The unique identifier of the user who created the post.
-     */
+    /// The unique identifier of the user who created the post.
     let userId: Int
 
-    /**
-     *  The unique identifier of the post.
-     */
+    /// The unique identifier of the post.
     let id: Int
 
-    /**
-     *  The title of the post.
-     */
+    /// The title of the post.
     let title: String
 
-    /**
-     *  The content of the post.
-     */
+    /// The body of the post.
     let body: String
 }
