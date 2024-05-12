@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CustomButton: View {
         
+    // These lines of code in the `CustomButton` struct are defining properties with `@State` property
+    // wrapper. Here's what each property is doing:
     @State var action: () -> Void
     @State var imageIcon: Image?
     @State var title: String?
